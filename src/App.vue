@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
+      <img class="logo" alt="Vue logo" src="./assets/logo.png">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
       <a v-on:click="logout">Logout</a>
     </div>
     <router-view id="content"/>
@@ -30,16 +30,21 @@ export default {
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
     text-align center
-    color #ff3a72
+    color #f4516d
     #nav
       padding 20px
-      background #1d1d1d
+      background #292929
     #content
       margin-top 20px
+    .logo
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      width 40px
   a
     text-decoration none
     cursor pointer
-    color #ff3a72
+    color #f4516d
   button
     height: 38px;
     padding: 0 30px;
@@ -82,7 +87,7 @@ export default {
     border-width: 1px;
     border-style: solid;
   input:focus
-    border-color #ff3a72
+    border-color #f4516d
   *:focus
     outline none
 </style>
