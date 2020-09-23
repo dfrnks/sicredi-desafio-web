@@ -25,7 +25,7 @@ export default {
 <style lang="stylus">
   body, html
     margin 0
-    background whitesmoke
+    background #e6e6e6
 
   #app
     font-family Avenir, Helvetica, Arial, sans-serif

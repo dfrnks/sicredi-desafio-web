@@ -57,6 +57,7 @@ export default {
 <style scoped lang="stylus">
   .action div
     display inline-flex
+    margin-left 5px
 
   .info div
     display inline-flex
