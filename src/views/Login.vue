@@ -60,11 +60,11 @@ export default {
 
 <style scoped lang="stylus">
   .btn-show-password
-    padding: 0 3px;
-    margin-left: -50px;
-    height: 32px;
-    border-radius: 50px;
+    padding 0 3px
+    margin-left -50px
+    height 32px
+    border-radius 50px
+    font-size 10px
   .row
     margin 5px
-
 </style>

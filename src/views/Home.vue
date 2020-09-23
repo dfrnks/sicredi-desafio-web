@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <div class="info">
       <div>Data Criação</div>
       <div>Nome</div>
@@ -56,10 +56,9 @@ export default {
 
 <style scoped lang="stylus">
   .action div
-    display: inline-flex;
+    display inline-flex
 
   .info div
-    display: inline-flex;
-    padding: 5px 10px;
-
+    display inline-flex
+    padding 5px 10px
 </style>

@@ -40,11 +40,11 @@ export default {
         type: this.type,
         history: this.history
       })
-          .then(function () {
-            self.$router.push({
-              name: "Home"
-            })
+        .then(function () {
+          self.$router.push({
+            name: "Home"
           })
+        })
     }
   }
 }

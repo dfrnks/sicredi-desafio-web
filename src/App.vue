@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <img class="logo" alt="Vue logo" src="./assets/logo.png">
+    <div class="nav">
+      <img class="logo" alt="logo" src="./assets/logo.png">
       <router-link to="/">Home</router-link> |
       <router-link to="/new">New</router-link> |
       <a v-on:click="logout">Logout</a>
     </div>
-    <router-view id="content"/>
+    <router-view class="content"/>
   </div>
 </template>
 
@@ -26,69 +26,61 @@ export default {
   body, html
     margin 0
     background whitesmoke
+
   #app
     font-family Avenir, Helvetica, Arial, sans-serif
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
     text-align center
     color #f4516d
-    #nav
+    .nav
       padding 20px
       background #292929
-    #content
+    .content
       margin-top 20px
     .logo
-      position: absolute;
-      left: 10px;
-      top: 8px;
+      position absolute
+      left 10px
+      top 8px
       width 40px
+
   a
     text-decoration none
     cursor pointer
     color #f4516d
+
   button
-    height: 38px;
-    padding: 0 30px;
-    text-align: center;
-    font-size: 11px;
-    line-height: 38px;
-    cursor: pointer;
-    box-sizing: border-box;
-
-    align-items: center;
-    border-radius: 4px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    font-weight: 500;
-    letter-spacing: .0892857143em;
-    justify-content: center;
-    outline: 0;
-    position: relative;
-    text-decoration: none;
-    text-indent: .0892857143em;
-    text-transform: uppercase;
-    transition-duration: .28s;
-    transition-property: box-shadow,transform,opacity;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-
-    color: #FFF;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+    padding 0 30px
+    text-align center
+    line-height 38px
+    cursor pointer
+    align-items center
+    border-radius 4px
+    display inline-flex
+    letter-spacing .0892857143em
+    justify-content center
+    outline 0
+    position relative
+    text-decoration none
+    text-indent .0892857143em
+    text-transform uppercase
+    transition-duration .28s
+    transition-property box-shadow,transform,opacity
+    transition-timing-function cubic-bezier(.4,0,.2,1)
+    color #FFF
+    background-color #56d353
+    border-color #56d353
 
   input
-    border-radius: 50px;
-    border-color: #e2e2e2;
-    padding: 8px;
-    border-width: 1px;
-    border-style: solid;
+    border-radius 50px
+    border-color #e2e2e2
+    padding 8px
+    border-width 1px
+    border-style solid
+
   input:focus
     border-color #f4516d
+
   *:focus
     outline none
 </style>
