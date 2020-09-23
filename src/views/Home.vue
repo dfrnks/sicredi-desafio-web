@@ -1,20 +1,10 @@
 <template>
   <div>
-    <div class="info">
-      <div>Data Criação</div>
-      <div>Nome</div>
-      <div>Tipo</div>
-    </div>
-
-    <div class="dragons" v-for="dragon in dragonsOrder" :key="dragon.id">
-      <div class="info">
-        <div>{{ dragon.createdAt | date }}</div>
-        <div>{{ dragon.name }}</div>
-        <div>{{ dragon.type }}</div>
-      </div>
-      <div class="action">
-        <div><button v-on:click="remover(dragon.id)">Remover</button></div>
-        <div><button v-on:click="$router.push('/change/' + dragon.id)">Alterar</button></div>
+    <div>
+      <div class="dragons" v-for="dragon in dragonsOrder" :key="dragon.id">
+        <div class="name">{{ dragon.id }} - {{ dragon.name }}</div>
+        <button v-on:click="remover(dragon.id)">Remover</button>
+        <button v-on:click="$router.push('/change/' + dragon.id)">Alterar</button>
       </div>
     </div>
   </div>
@@ -55,11 +45,22 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  .action div
+  .dragons
+    width 80%
+    background white
+    margin 5px auto
+    padding 5px
+    button
+      padding 0 5px
+    .name
+      width 60%
+  .dragons  *
     display inline-flex
     margin-left 5px
 
-  .info div
-    display inline-flex
-    padding 5px 10px
+  @media screen and (max-device-width: 840px)
+    .dragons
+      width 95%
+      .name
+        width 40%
 </style>

@@ -18,6 +18,7 @@
       </label>
     </div>
     <div class="row">
+      <button v-on:click="$router.back()">Voltar</button>
       <button v-on:click="register">Alterar</button>
     </div>
   </div>
@@ -60,4 +61,6 @@ export default {
 <style scoped lang="stylus">
   .row
     margin 5px
+    button
+      margin 5px
 </style>
