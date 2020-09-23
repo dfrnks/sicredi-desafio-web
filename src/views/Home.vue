@@ -14,7 +14,7 @@
       </div>
       <div class="action">
         <div><button v-on:click="remover(dragon.id)">Remover</button></div>
-        <div><button >Alterar</button></div>
+        <div><button v-on:click="$router.push('/change/' + dragon.id)">Alterar</button></div>
       </div>
     </div>
   </div>
@@ -26,12 +26,6 @@ export default {
   data: () => ({
     dragons: [],
   }),
-  filters: {
-    date (value) {
-      let date = new Date(value)
-      return date.toLocaleDateString("pt-BR") + " " + date.toLocaleTimeString("pt-BR")
-    }
-  },
   computed: {
     dragonsOrder () {
       let sorting = -1

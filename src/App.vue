@@ -3,6 +3,7 @@
     <div id="nav">
       <img class="logo" alt="Vue logo" src="./assets/logo.png">
       <router-link to="/">Home</router-link> |
+      <router-link to="/new">New</router-link> |
       <a v-on:click="logout">Logout</a>
     </div>
     <router-view id="content"/>

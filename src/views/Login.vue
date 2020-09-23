@@ -1,25 +1,23 @@
 <template>
   <div>
-    <div>
-      <div class="row">
-        <label>
-          Username:
-          <input v-model="username" type="text" placeholder="user">
-        </label>
-      </div>
-      <div class="row">
-        <label>
-          Password:
-          <input v-model="password" :type="password_type" placeholder="password">
-        </label>
-        <button class="btn-show-password" v-on:click="showPassword">Show</button>
-      </div>
-      <div v-if="mensagem_login">
-        <h5 :class="{'text-danger': has_error}">{{ mensagem_login }}</h5>
-      </div>
-      <div class="row">
-        <button v-on:click="login">login</button>
-      </div>
+    <div class="row">
+      <label>
+        Username:
+        <input v-model="username" type="text" placeholder="user">
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        Password:
+        <input v-model="password" :type="password_type" placeholder="password">
+      </label>
+      <button class="btn-show-password" v-on:click="showPassword">Show</button>
+    </div>
+    <div v-if="mensagem_login">
+      <h5 :class="{'text-danger': has_error}">{{ mensagem_login }}</h5>
+    </div>
+    <div class="row">
+      <button v-on:click="login">login</button>
     </div>
   </div>
 </template>
